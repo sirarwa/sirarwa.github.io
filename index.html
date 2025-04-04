@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional Portfolio showcasing skills and projects for Arwa David" />
+    <meta name="keywords" content="software developer, web developer, portfolio, Arwa David, Kenya" />
+    <meta name="author" content="Arwa David" />
+    <title>Arwa David Portfolio</title>
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header role="banner">
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="logo" role="heading" aria-level="1">Arwa David</div>
+        <ul class="nav-links" role="list">
+          <li><a href="#home" class="active" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+          <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" role="main">
+      <!-- Hero Section -->
+      <section id="home" class="hero" aria-label="Introduction">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hello, I'm <span class="highlight">David Arwa</span></h1>
+            <h2>Software Developer</h2>
+            <p>I create elegant solutions to solve everyday problems.</p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View My Projects</a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-container">
+              <img src="My_Profile.jpg" alt="Profile photo of Arwa David" />
+            </div>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <a href="#about" aria-label="Scroll to about section"><i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about section" aria-labelledby="about-title">
+        <div class="section-container">
+          <h2 id="about-title" class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-image">
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Illustration representing about section">
+            </div>
+            <div class="about-text">
+              <p>I'm a digital catalyst. I translate business needs into sleek code, automate workflows like a pro, and build systems that actually work. I'm here to amplify your impact, one line of code and one perfectly managed task at a time.</p>
+              <p>I believe in continuous learning and staying updated with emerging technologies. My approach combines technical expertise with creative problem-solving to deliver solutions that not only meet but exceed client expectations.</p>
+              
+              <a href="David_Arwa_CV.pdf" target="_blank" class="btn btn-primary download-cv" aria-label="Download my CV">Download My CV <i class="fas fa-download" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section" aria-labelledby="skills-title">
+        <div class="section-container">
+          <h2 id="skills-title" class="section-title">My Skills</h2>
+          <div class="skills-content">
+            <div class="skills-description">
+              <p>I am skilled in a range of Programming Languages, from front-end to back-end. Here are my key technical skills:</p>
+            </div>
+            
+            <div class="skills-categories" role="list">
+              <div class="skill-category" role="listitem">
+                <h3>Front-End</h3>
+                <div class="skill-list" role="list">
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>HTML</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>JavaScript</span>
+                      <span>40%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 40%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>CSS</span>
+                      <span>50%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 50%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skill-category" role="listitem">
+                <h3>Back-End</h3>
+                <div class="skill-list" role="list">
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>Node.js</span>
+                      <span>40%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 40%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>Python</span>
+                      <span>70%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>SQL</span>
+                      <span>65%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skill-category" role="listitem">
+                <h3>Other Skills</h3>
+                <div class="skill-list" role="list">
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>Data Analysis</span>
+                      <span>70%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>Git/GitHub</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item" role="listitem">
+                    <div class="skill-info">
+                      <span>Generative AI Tools</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                      <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                  </div>
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <span>Virtual Assistance</span>
+                        <span>100%</span>
+                      </div>
+                      <div class="skill-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <div class="skill-progress" style="width: 100%"></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="education section">
+        <div class="section-container">
+          <h2 class="section-title">Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <span>Feb 2025 - Present</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Software Development</h3>
+                <h4>Power Learn Project Africa</h4>
+                <p>Currently enrolled in a 16 Week Software Development Course covering key areas like Web Development, Python, Database, Dart with Flutter, Entrepreneurship and Startup Development</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <span>Feb 2025 - March 2025</span>
+              </div>
+              <div class="timeline-content">
+                <h3>AI Starter Kit</h3>
+                <h4>ALX Africa</h4>
+                <p> Acquired foundational knowledge in AI such as effective prompting, AI-Powered Automation Agents, AI-Powered Web Development,  image/video generation, generative UI,Generating 3D Objects, Generative Video Effects</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <span>Aug 2024 - Oct 2024</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Virtual Assistant</h3>
+                <h4>ALX Africa</h4>
+                <p>A Virtual Assistance short course that covered skills in email management, project management, data entry, travel management, Google Workspace among other skills. </p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <span>2017 - 2022</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Bachelor of Commerce (Business Information Systems)</h3>
+                <h4>The University of Nairobi</h4>
+                <p>Equipped with a strong foundation in business principles and technical expertise. Acquiredskills in database management, Information System Audit, and project management. I am adept at leveraging information systems to drive strategic business decisions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects section" aria-labelledby="projects-title">
+        <div class="section-container">
+          <h2 id="projects-title" class="section-title">My Projects</h2>
+          <div class="project-filters" role="tablist" aria-label="Project categories">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="all-projects">All</button>
+            <button class="filter-btn" data-filter="web" role="tab" aria-selected="false" aria-controls="web-projects">Web</button>
+            <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false" aria-controls="mobile-projects">Mobile</button>
+            <button class="filter-btn" data-filter="data" role="tab" aria-selected="false" aria-controls="data-projects">Data</button>
+            <button class="filter-btn" data-filter="python" role="tab" aria-selected="false" aria-controls="python-projects">Python</button>
+          </div>
+          
+          <div class="projects-grid" role="tabpanel" id="all-projects" aria-labelledby="all">
+            <div class="project-card" data-category="web">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="My Portfolio Website">
+              </div>
+              <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>A portfolio website that showcases my skills, interests and projects.</p>
+                <div class="project-tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sirarwa/sirarwa.github.io" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                  <a href="https://github.com/sirarwa/sirarwa.github.io" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-card" data-category="mobile">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/20552602/pexels-photo-20552602/free-photo-of-calculator.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Calculator App">
+              </div>
+              <div class="project-info">
+                <h3>Calculator App</h3>
+                <p>A simple calculator app that allows users to perform basic arithmetic operations.</p>
+                <div class="project-tech">
+                  <span>Python</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sirarwa/PLP-Learning-Python" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-card" data-category="data">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/14751274/pexels-photo-14751274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Regression Analysis">
+              </div>
+              <div class="project-info">
+                <h3>Regression Analysis</h3>
+                <p>A mini project on regression analysis on a data set to predict heart attack.</p>
+                <div class="project-tech">
+                  <span>Python</span>
+                  <span>Jupyter Notebook</span>
+                  <span>Pandas</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sirarwa/heart-attack-analysis" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-card" data-category="python">
+              <div class="project-image">
+                <img src="https://images.pexels.com/photos/6424590/pexels-photo-6424590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="File Manipulation">
+              </div>
+              <div class="project-info">
+                <h3>File Manipulation & Handling</h3>
+                <p>A Python script that allows users to manipulate and handle files in a directory.</p>
+                <div class="project-tech">
+                  <span>Python</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sirarwa/PLP-Python-Wk4-Task" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interests Section -->
+      <section id="interests" class="interests section">
+        <div class="section-container">
+          <h2 class="section-title">My Interests</h2>
+          <div class="interests-content">
+            <div class="interests-grid">
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3>Programming</h3>
+                <p>Passionate about coding and solving complex problems through creative solutions.</p>
+              </div>
+    <!--Interests Section-->
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI & Machine Learning</h3>
+                <p>Fascinated by artificial intelligence and its applications in solving real-world problems.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <h3>Tech Innovations</h3>
+                <p>I stay updated on Tech trends and news by reading tech blogs, websites and other related media.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <i class="fas fa-music"></i>
+                </div>
+                <h3>Music</h3>
+                <p>Love listening to various Christian and Gospel music and loves playing the piano.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <i class="fas fa-plane"></i>
+                </div>
+                <h3>Travel</h3>
+                <p>I enjoy exploring new places and experiencing different cultures around the world.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Gaming</h3>
+                <p>Enthusiastic about gamin.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section" aria-labelledby="contact-title">
+        <div class="section-container">
+          <h2 id="contact-title" class="section-title">Get In Touch</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>I'm Here To Help</h3>
+              <p>Whether you have a project in mind, a question, or just want to say hello, feel free to reach out to me. I'm always open to discussing new projects, opportunities, and partnerships.</p>
+              
+              <div class="contact-details" role="list">
+                <div class="contact-item" role="listitem">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <div>
+                    <h4>Location</h4>
+                    <p>Nairobi, Kenya</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item" role="listitem">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <div>
+                    <h4>Email</h4>
+                    <p>arwadavid98@gmail.com</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item" role="listitem">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  <div>
+                    <h4>Phone</h4>
+                    <p>+254 (796) 470-369</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-social" role="list">
+                <a href="mailto:arwadavid98@gmail.com" aria-label="Send email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/davidarwa/" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://x.com/adavio_" aria-label="Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://wa.me/254796470369" aria-label="WhatsApp contact"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/arwadavido/" aria-label="Facebook profile"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <form id="contactForm" aria-label="Contact form">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Enter subject" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Enter your message" required aria-required="true"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section-->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Arwa David</h3>
+          <p>Software Developer</p>
+        </div>
+        <div class="footer-links" role="list">
+          <a href="#home" role="listitem">Home</a>
+          <a href="#about" role="listitem">About</a>
+          <a href="#skills" role="listitem">Skills</a>
+          <a href="#education" role="listitem">Education</a>
+          <a href="#projects" role="listitem">Projects</a>
+          <a href="#contact" role="listitem">Contact</a>
+        </div>
+        <div class="footer-social" role="list">
+          <a href="https://github.com/sirarwa" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/davidarwa/" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://x.com/adavio_" aria-label="Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://wa.me/254796470369" aria-label="WhatsApp contact"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/arwadavido/" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/arwadavido/" aria-label="Facebook profile"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Arwa. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </a>
+
+    <script>
+      // Dark Mode Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      
+      // Check for saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        body.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+      }
+      
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+        
+        // Update aria-pressed state
+        themeToggle.setAttribute('aria-pressed', newTheme === 'dark');
+      });
+      
+      function updateThemeIcon(theme) {
+        const icon = themeToggle.querySelector('i');
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+      
+      // Mobile Menu Toggle
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      
+      hamburger.addEventListener('click', () => {
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        body.classList.toggle('menu-open');
+      });
+      
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+          body.classList.remove('menu-open');
+        });
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+          body.classList.remove('menu-open');
+        }
+      });
+      
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+      
+      // Back to Top Button
+      const backToTop = document.querySelector('.back-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      
+      // Project Filtering
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          button.classList.add('active');
+          button.setAttribute('aria-selected', 'true');
+          
+          const filter = button.getAttribute('data-filter');
+          
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 100);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
