@@ -59,8 +59,8 @@ sirarwa-portfolio/
 
 ## Author
 
-* [David Arwa]
+* David Arwa
 
 ## Submission
 
-This project was submitted for the Power Learn Project Africa Feb 2025 Cohort Hackathon 1: Portfolio Challenge.
+This project was a submission for the Power Learn Project Africa Software Development- Feb 2025 Cohort Hackathon 1: Portfolio Challenge.
