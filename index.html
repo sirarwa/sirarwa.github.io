@@ -426,8 +426,6 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
               </div>
-              <input type="hidden" name="successUrl" value="https://sirarwa.github.io/#contact?status=success">
-              <input type="hidden" name="errorUrl" value="https://sirarwa.github.io/#contact?status=error">
               <button type="submit" class="btn btn-primary">Send Message</button>
               <div id="formStatus" class="form-status"></div>
             </form>
@@ -587,31 +585,25 @@
         });
       });
 
-      // Handle form submission status
-      window.addEventListener('load', function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-        const statusDiv = document.getElementById('formStatus');
-        
-        if (status === 'success') {
-          statusDiv.textContent = 'Message sent successfully!';
-          statusDiv.className = 'form-status success';
-          document.getElementById('contactForm').reset();
-        } else if (status === 'error') {
-          statusDiv.textContent = 'Error sending message. Please try again.';
-          statusDiv.className = 'form-status error';
-        }
-      });
-
       // Handle form submission
       document.getElementById('contactForm').addEventListener('submit', function(e) {
         const submitButton = this.querySelector('button[type="submit"]');
         const statusDiv = document.getElementById('formStatus');
         
-        // Disable the submit button
+        // Disable the submit button and show sending status
         submitButton.disabled = true;
         statusDiv.textContent = 'Sending...';
         statusDiv.className = 'form-status sending';
+        
+        // Let the form submit naturally to the hidden iframe
+        // The Google Apps Script will handle the submission
+        // We'll show success message after a short delay
+        setTimeout(() => {
+          statusDiv.textContent = 'Message sent successfully!';
+          statusDiv.className = 'form-status success';
+          this.reset();
+          submitButton.disabled = false;
+        }, 2000);
       });
     </script>
   </body>
