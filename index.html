@@ -584,8 +584,8 @@
         });
       });
 
-      // Replace this URL with your Google Apps Script deployment URL
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyyjy2Z9VoBO__L2CUIKaBM8yD8xhR1l0MGH2NG5fklho3oPj31ahWW-CVOhgx7J5_s/exec';
+      // Google Apps Script deployment URL
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwumrM1acFY0OeAEI4GxR21Rc0KUtsRgUQBd0_reOx-QrYVmWxTb_LmAyaC_vpu9tqK/exec';
 
       document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -610,25 +610,37 @@
         // Send data to Google Sheet
         fetch(SCRIPT_URL, {
           method: 'POST',
+          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData)
         })
-        .then(response => response.json())
-        .then(data => {
-          if (data.result === 'success') {
-            statusDiv.textContent = 'Message sent successfully!';
-            statusDiv.className = 'form-status success';
-            form.reset();
-          } else {
-            throw new Error(data.message);
+        .then(response => {
+          console.log('Response status:', response.status);
+          console.log('Response headers:', response.headers);
+          return response.text();
+        })
+        .then(text => {
+          console.log('Response text:', text);
+          try {
+            const data = JSON.parse(text);
+            if (data.result === 'success') {
+              statusDiv.textContent = 'Message sent successfully!';
+              statusDiv.className = 'form-status success';
+              form.reset();
+            } else {
+              throw new Error(data.message || 'Unknown error occurred');
+            }
+          } catch (error) {
+            console.error('Error parsing response:', error);
+            throw new Error('Failed to parse server response');
           }
         })
         .catch(error => {
+          console.error('Error details:', error);
           statusDiv.textContent = 'Error sending message. Please try again.';
           statusDiv.className = 'form-status error';
-          console.error('Error:', error);
         })
         .finally(() => {
           submitButton.disabled = false;
