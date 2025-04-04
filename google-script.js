@@ -22,17 +22,37 @@ function doPost(e) {
     // Append the data to the sheet
     sheet.appendRow(rowData);
     
-    // Return success response
+    // Return success response with CORS headers
     return ContentService.createTextOutput(JSON.stringify({
       'result': 'success',
       'message': 'Data saved successfully'
-    })).setMimeType(ContentService.MimeType.JSON);
+    }))
+    .setMimeType(ContentService.MimeType.JSON)
+    .setHeader('Access-Control-Allow-Origin', '*')
+    .setHeader('Access-Control-Allow-Methods', 'POST')
+    .setHeader('Access-Control-Allow-Headers', 'Content-Type');
     
   } catch (error) {
-    // Return error response
+    // Return error response with CORS headers
     return ContentService.createTextOutput(JSON.stringify({
       'result': 'error',
       'message': error.toString()
-    })).setMimeType(ContentService.MimeType.JSON);
+    }))
+    .setMimeType(ContentService.MimeType.JSON)
+    .setHeader('Access-Control-Allow-Origin', '*')
+    .setHeader('Access-Control-Allow-Methods', 'POST')
+    .setHeader('Access-Control-Allow-Headers', 'Content-Type');
   }
+}
+
+// Add doGet function to handle preflight requests
+function doGet(e) {
+  return ContentService.createTextOutput(JSON.stringify({
+    'result': 'success',
+    'message': 'GET request received'
+  }))
+  .setMimeType(ContentService.MimeType.JSON)
+  .setHeader('Access-Control-Allow-Origin', '*')
+  .setHeader('Access-Control-Allow-Methods', 'GET, POST')
+  .setHeader('Access-Control-Allow-Headers', 'Content-Type');
 } 
