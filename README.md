@@ -44,7 +44,7 @@ sirarwa-portfolio/
 ## Project Links
 
 * **GitHub Repository:** https://github.com/sirarwa/sirarwa.github.io
-* **Live Demo:** [Link to your deployed website, if applicable]
+* **Live Demo:** https://sirarwa.github.io/
 
 ## Contact
 
