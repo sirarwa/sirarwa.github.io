@@ -256,6 +256,7 @@
                 <div class="project-tech">
                   <span>HTML</span>
                   <span>CSS</span>
+                  <span>JavaScript</span>
                 </div>
                 <div class="project-links">
                   <a href="https://sirarwa.github.io/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -285,8 +286,8 @@
                 <img src="https://images.pexels.com/photos/14751274/pexels-photo-14751274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Regression Analysis">
               </div>
               <div class="project-info">
-                <h3>Regression Analysis</h3>
-                <p>A mini project on regression analysis on a data set to predict heart attack.</p>
+                <h3>Heart Attack Analysis</h3>
+                <p>A mini project on regression analysis on a health data set to predict chances of heart attack.</p>
                 <div class="project-tech">
                   <span>Python</span>
                   <span>Jupyter Notebook</span>
@@ -330,7 +331,7 @@
                 <h3>Programming</h3>
                 <p>Passionate about coding and solving complex problems through creative solutions.</p>
               </div>
-    <!--Interests Section-->
+              
               <div class="interest-card">
                 <div class="interest-icon">
                   <i class="fas fa-robot"></i>
@@ -409,7 +410,7 @@
               </div>
             </div>
             
-            <form id="contactForm" class="contact-form" action="https://script.google.com/macros/s/AKfycbxPf_n4BOjAjVFQFXu244vm3DWyGAOY0jR_B_nr73c6JH4XGQlz14bv1V_P8GDmKHtx/exec" method="POST" target="hiddenFrame">
+            <form id="contactForm" class="contact-form">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -429,7 +430,6 @@
               <button type="submit" class="btn btn-primary">Send Message</button>
               <div id="formStatus" class="form-status"></div>
             </form>
-            <iframe name="hiddenFrame" style="display: none;"></iframe>
           </div>
         </div>
       </section>
@@ -587,6 +587,7 @@
 
       // Handle form submission
       document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
         const submitButton = this.querySelector('button[type="submit"]');
         const statusDiv = document.getElementById('formStatus');
         
@@ -595,15 +596,39 @@
         statusDiv.textContent = 'Sending...';
         statusDiv.className = 'form-status sending';
         
-        // Let the form submit naturally to the hidden iframe
-        // The Google Apps Script will handle the submission
-        // We'll show success message after a short delay
-        setTimeout(() => {
-          statusDiv.textContent = 'Message sent successfully!';
-          statusDiv.className = 'form-status success';
-          this.reset();
+        // Get form data
+        const formData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
+        };
+        
+        // Submit to Google Sheets
+        fetch('https://script.google.com/macros/s/AKfycbzMYm6WF2B-NvEPhb_C5EsLIPVrQXJju0AdAZDhx-GVWKqhfHm9ScDM4MktGWMVrf1R/exec', {
+          method: 'POST',
+          body: JSON.stringify(formData),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            statusDiv.textContent = 'Message sent successfully!';
+            statusDiv.className = 'form-status success';
+            this.reset();
+          } else {
+            throw new Error('Network response was not ok');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          statusDiv.textContent = 'Error sending message. Please try again.';
+          statusDiv.className = 'form-status error';
+        })
+        .finally(() => {
           submitButton.disabled = false;
-        }, 2000);
+        });
       });
     </script>
   </body>
