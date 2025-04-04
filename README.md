@@ -37,7 +37,7 @@ sirarwa-portfolio/
 
 1.  Clone this repository to your local machine:
     ```bash
-    git clone [your-repository-url]
+    git clone https://github.com/sirarwa/sirarwa.github.io
     ```
 2.  Open the `index.html` file in your web browser.
 
