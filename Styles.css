@@ -467,15 +467,13 @@
   }
   
   /* ======= Skills Section ======= */
-  .skills {
-    background-color: var(--background-alt);
+  .skills-content {
+    margin-top: var(--spacing-xl);
   }
   
   .skills-description {
-    max-width: 800px;
-    margin: 0 auto var(--spacing-xl);
     text-align: center;
-    color: var(--text-color-light);
+    margin-bottom: var(--spacing-xl);
   }
   
   .skills-categories {
@@ -484,52 +482,63 @@
     gap: var(--spacing-xl);
   }
   
-  .skill-category h3 {
-    font-size: 1.4rem;
-    font-weight: var(--font-weight-bold);
-    margin-bottom: var(--spacing-lg);
-    color: var(--primary-color);
-    text-align: center;
-  }
-  
-  .skill-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-  
-  .skill-item {
-    background-color: white;
+  .skill-category {
+    background: var(--card-bg);
     padding: var(--spacing-lg);
-    border-radius: var(--border-radius-md);
+    border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow);
     transition: transform var(--transition-normal);
   }
   
-  .skill-item:hover {
+  .skill-category:hover {
     transform: translateY(-5px);
-    box-shadow: var(--box-shadow-hover);
+  }
+  
+  .skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .skill-list {
+    display: grid;
+    gap: var(--spacing-md);
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-normal);
+  }
+  
+  .skill-item:hover {
+    background-color: var(--background-alt);
   }
   
   .skill-info {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-sm);
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 100%;
+  }
+  
+  .skill-info i {
+    font-size: 2.5rem;
+    width: 40px;
+    text-align: center;
+    transition: transform var(--transition-normal);
+  }
+  
+  .skill-item:hover .skill-info i {
+    transform: scale(1.1);
+  }
+  
+  .skill-info span {
     font-weight: var(--font-weight-medium);
-  }
-  
-  .skill-bar {
-    height: 8px;
-    background-color: var(--border-color);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-light) 0%, var(--primary-color) 100%);
-    border-radius: 4px;
-    transition: width 1.5s ease-in-out;
+    font-size: 1.1rem;
   }
   
   /* ======= Education Section ======= */
@@ -848,42 +857,66 @@
   }
   
   .contact-form {
-    background-color: white;
+    background: var(--card-bg);
     padding: var(--spacing-xl);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow);
   }
   
   .form-group {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
   }
   
   .form-group label {
     display: block;
     margin-bottom: var(--spacing-xs);
     font-weight: var(--font-weight-medium);
+    color: var(--text-color);
   }
   
   .form-group input,
   .form-group textarea {
     width: 100%;
-    padding: 0.8rem 1rem;
+    padding: var(--spacing-md);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-md);
-    background-color: var(--background-alt);
-    transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+    background-color: var(--background-color);
+    transition: border-color var(--transition-normal);
   }
   
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(110, 89, 165, 0.2);
+    box-shadow: 0 0 0 2px rgba(110, 89, 165, 0.1);
   }
   
   .form-group textarea {
-    resize: vertical;
     min-height: 150px;
+    resize: vertical;
+  }
+  
+  .form-status {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .form-status.sending {
+    background-color: var(--background-alt);
+    color: var(--text-color);
+  }
+  
+  .form-status.success {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .form-status.error {
+    background-color: var(--error-color);
+    color: white;
   }
   
   /* ======= Footer ======= */
