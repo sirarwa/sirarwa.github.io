@@ -1,11 +1,11 @@
 function doPost(e) {
   try {
-    // Parse the incoming data
-    const data = JSON.parse(e.postData.contents);
-    
     // Get the active spreadsheet
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     const sheet = ss.getActiveSheet();
+    
+    // Get form data
+    const formData = e.parameter;
     
     // Get the current date and time
     const timestamp = new Date();
@@ -13,37 +13,25 @@ function doPost(e) {
     // Prepare the row data
     const rowData = [
       timestamp,
-      data.name,
-      data.email,
-      data.subject,
-      data.message
+      formData.name,
+      formData.email,
+      formData.subject,
+      formData.message
     ];
     
     // Append the data to the sheet
     sheet.appendRow(rowData);
     
     // Return success response
-    return ContentService.createTextOutput(JSON.stringify({
-      'result': 'success',
-      'message': 'Data saved successfully'
-    }))
-    .setMimeType(ContentService.MimeType.JSON);
+    return HtmlService.createHtmlOutput('<script>window.top.location.href="' + e.parameter.successUrl + '";</script>');
     
   } catch (error) {
     // Return error response
-    return ContentService.createTextOutput(JSON.stringify({
-      'result': 'error',
-      'message': error.toString()
-    }))
-    .setMimeType(ContentService.MimeType.JSON);
+    return HtmlService.createHtmlOutput('<script>window.top.location.href="' + e.parameter.errorUrl + '";</script>');
   }
 }
 
 // Add doGet function to handle preflight requests
 function doGet(e) {
-  return ContentService.createTextOutput(JSON.stringify({
-    'result': 'success',
-    'message': 'GET request received'
-  }))
-  .setMimeType(ContentService.MimeType.JSON);
+  return HtmlService.createHtmlOutput('GET request received');
 } 
