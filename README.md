@@ -4,35 +4,22 @@ This repository contains my personal portfolio website, created as part of the P
 
 ## Project Overview
 
-This portfolio website showcases my skills, background, and achievements in the tech. It includes sections for my programming skills, an "About Me" section, educational background (with a downloadable CV), interests, projects, and a contact form.
+This portfolio website showcases my skills, background, and achievements in the tech. It includes sections for my skills, a description about me, educational background (with a downloadable CV), interests, projects, and a contact form linked to Google Sheets.
 
 ## Features
 
-* **Programming Languages:** A list of programming languages I am proficient in.
-* **About Section:** A brief introduction about myself, my passion for technology, and my career aspirations.
+* **Programming Languages:** A list of programming languages I am skilled in.
+* **About Section:** A brief introduction about myself and my career aspirations.
 * **Educational Background:** Details of my education, including a downloadable CV.
-* **Interests:** A description of my interests in tech and my professional goals.
-* **Projects:** Links to my projects with brief descriptions.
-* **Contact Form:** A way for collaborators or employers to contact me.
+* **Interests:** A description of my interests and professional goals.
+* **Projects:** GitHub repo and demo links to my projects with brief descriptions.
+* **Contact Form:** A way for collaborators or employers to contact me (This form is linked to Google Sheets using script)
 
 ## Technologies Used
 
 * HTML
 * CSS
-* A bit of JavaScript
-
-## Project Structure
-
-sirarwa-portfolio/
-├── index.html
-├── style.css
-├── assets/
-│   ├── images/
-│   │   └── ...
-│   ├── cv/
-│   │   └── your_cv.pdf
-│   └── ...
-└── README.md
+* A bit of JavaScript.
 ## How to View the Project
 
 1.  Clone this repository to your local machine:
@@ -55,7 +42,7 @@ sirarwa-portfolio/
 ## Acknowledgments
 
 * Power Learn Project Africa for organizing this hackathon.
-* My PLP peers for their support and collaboration.
+* Fellow Power Learn Project Africa learners for their peer reviews and support.
 
 ## Author
 
@@ -63,4 +50,4 @@ sirarwa-portfolio/
 
 ## Submission
 
-This project was a submission for the Power Learn Project Africa Software Development- Feb 2025 Cohort Hackathon 1: Portfolio Challenge.
+This project was submitted for the Power Learn Project Africa Software Development- Feb 2025 Cohort Hackathon 1: Portfolio Challenge.
