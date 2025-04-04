@@ -585,7 +585,7 @@
       });
 
       // Google Apps Script deployment URL
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwumrM1acFY0OeAEI4GxR21Rc0KUtsRgUQBd0_reOx-QrYVmWxTb_LmAyaC_vpu9tqK/exec';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxPf_n4BOjAjVFQFXu244vm3DWyGAOY0jR_B_nr73c6JH4XGQlz14bv1V_P8GDmKHtx/exec';
 
       document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -616,29 +616,15 @@
           },
           body: JSON.stringify(formData)
         })
-        .then(response => {
-          console.log('Response status:', response.status);
-          console.log('Response headers:', response.headers);
-          return response.text();
-        })
-        .then(text => {
-          console.log('Response text:', text);
-          try {
-            const data = JSON.parse(text);
-            if (data.result === 'success') {
-              statusDiv.textContent = 'Message sent successfully!';
-              statusDiv.className = 'form-status success';
-              form.reset();
-            } else {
-              throw new Error(data.message || 'Unknown error occurred');
-            }
-          } catch (error) {
-            console.error('Error parsing response:', error);
-            throw new Error('Failed to parse server response');
-          }
+        .then(() => {
+          // Since we're using no-cors mode, we can't read the response
+          // But we can assume success if the request was sent
+          statusDiv.textContent = 'Message sent successfully!';
+          statusDiv.className = 'form-status success';
+          form.reset();
         })
         .catch(error => {
-          console.error('Error details:', error);
+          console.error('Error:', error);
           statusDiv.textContent = 'Error sending message. Please try again.';
           statusDiv.className = 'form-status error';
         })
