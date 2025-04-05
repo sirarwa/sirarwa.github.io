@@ -2,18 +2,18 @@
 
 This repository contains my personal portfolio website, created as part of the Power Learn Project Africa Feb 2025 Cohort Hackathon 1: Portfolio Challenge.
 
-## Project Overview
+## Overview
 
 This portfolio website showcases my skills, background, and achievements in the tech. It includes sections for my skills, a description about me, educational background (with a downloadable CV), interests, projects, and a contact form linked to Google Sheets.
 
 ## Features
 
 * **Programming Languages:** A list of programming languages I am skilled in.
-* **About Section:** A brief introduction about myself and my career aspirations.
+* **About Me Section:** A brief introduction about myself and my career aspirations.
 * **Educational Background:** Details of my education, including a downloadable CV.
 * **Interests:** A description of my interests and professional goals.
 * **Projects:** GitHub repo and demo links to my projects with brief descriptions.
-* **Contact Form:** A way for collaborators or employers to contact me (This form is linked to Google Sheets using script)
+* **Contact Form:** Collaborators or employers can contact me through this (This form is linked to Google Sheets using script)
 
 ## Technologies Used
 
