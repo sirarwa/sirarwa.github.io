@@ -19,7 +19,6 @@ This portfolio website showcases my skills, background, and achievements in the 
 
 * HTML
 * CSS
-* A bit of JavaScript.
 ## How to View the Project
 
 1.  Clone this repository to your local machine:
