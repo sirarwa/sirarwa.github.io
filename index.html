@@ -27,16 +27,6 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-right">
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-            <i class="fas fa-moon" aria-hidden="true"></i>
-          </button>
-          <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </button>
-        </div>
       </nav>
     </header>
 
@@ -238,11 +228,6 @@
         <div class="section-container">
           <h2 id="projects-title" class="section-title">My Projects</h2>
           <div class="project-filters" role="tablist" aria-label="Project categories">
-            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="all-projects">All</button>
-            <button class="filter-btn" data-filter="web" role="tab" aria-selected="false" aria-controls="web-projects">Web</button>
-            <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false" aria-controls="mobile-projects">Mobile</button>
-            <button class="filter-btn" data-filter="data" role="tab" aria-selected="false" aria-controls="data-projects">Data</button>
-            <button class="filter-btn" data-filter="python" role="tab" aria-selected="false" aria-controls="python-projects">Python</button>
           </div>
           
           <div class="projects-grid" role="tabpanel" id="all-projects" aria-labelledby="all">
@@ -466,170 +451,6 @@
 
     <a href="#home" class="back-to-top" aria-label="Back to top">
       <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </a>
-
-    <script>
-      // Dark Mode Toggle
-      const themeToggle = document.getElementById('theme-toggle');
-      const body = document.body;
-      
-      // Check for saved theme preference
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        body.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
-      }
-      
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = body.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-        
-        // Update aria-pressed state
-        themeToggle.setAttribute('aria-pressed', newTheme === 'dark');
-      });
-      
-      function updateThemeIcon(theme) {
-        const icon = themeToggle.querySelector('i');
-        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-      }
-      
-      // Mobile Menu Toggle
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      
-      hamburger.addEventListener('click', () => {
-        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-        hamburger.setAttribute('aria-expanded', !isExpanded);
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-        body.classList.toggle('menu-open');
-      });
-      
-      // Close mobile menu when clicking a link
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('active');
-          body.classList.remove('menu-open');
-        });
-      });
-      
-      // Close mobile menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('active');
-          body.classList.remove('menu-open');
-        }
-      });
-      
-      // Smooth Scrolling
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-      
-      // Back to Top Button
-      const backToTop = document.querySelector('.back-to-top');
-      
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          backToTop.classList.add('visible');
-        } else {
-          backToTop.classList.remove('visible');
-        }
-      });
-      
-      // Project Filtering
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      const projectCards = document.querySelectorAll('.project-card');
-      
-      filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          filterButtons.forEach(btn => {
-            btn.classList.remove('active');
-            btn.setAttribute('aria-selected', 'false');
-          });
-          button.classList.add('active');
-          button.setAttribute('aria-selected', 'true');
-          
-          const filter = button.getAttribute('data-filter');
-          
-          projectCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-              card.style.display = 'block';
-              setTimeout(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-              }, 100);
-            } else {
-              card.style.opacity = '0';
-              card.style.transform = 'translateY(20px)';
-              setTimeout(() => {
-                card.style.display = 'none';
-              }, 300);
-            }
-          });
-        });
-      });
-
-      // Handle form submission
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const submitButton = this.querySelector('button[type="submit"]');
-        const statusDiv = document.getElementById('formStatus');
-        
-        // Disable the submit button and show sending status
-        submitButton.disabled = true;
-        statusDiv.textContent = 'Sending...';
-        statusDiv.className = 'form-status sending';
-        
-        // Get form data
-        const formData = {
-          name: document.getElementById('name').value,
-          email: document.getElementById('email').value,
-          subject: document.getElementById('subject').value,
-          message: document.getElementById('message').value
-        };
-        
-        // Submit to Google Sheets
-        fetch('https://script.google.com/macros/s/AKfycbzMYm6WF2B-NvEPhb_C5EsLIPVrQXJju0AdAZDhx-GVWKqhfHm9ScDM4MktGWMVrf1R/exec', {
-          method: 'POST',
-          body: JSON.stringify(formData),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            statusDiv.textContent = 'Message sent successfully!';
-            statusDiv.className = 'form-status success';
-            this.reset();
-          } else {
-            throw new Error('Network response was not ok');
-          }
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          statusDiv.textContent = 'Error sending message. Please try again.';
-          statusDiv.className = 'form-status error';
-        })
-        .finally(() => {
-          submitButton.disabled = false;
-        });
-      });
-    </script>
+    </a>     
   </body>
 </html>
