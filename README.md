@@ -15,11 +15,10 @@ This portfolio website showcases my skills, background, and achievements in the 
 * **Projects:** GitHub repo and demo links to my projects with brief descriptions.
 * **Contact Form:** Collaborators or employers can contact me through this (This form is linked to Google Sheets using script)
 
-## Technologies Used
+## Languages Used
 
 * HTML
 * CSS
-* A bit of JavaScript.
 ## How to View the Project
 
 1.  Clone this repository to your local machine:
