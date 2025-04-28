@@ -1,0 +1,8 @@
+Using only HTML and CSS, create me a personal portfolio website that showcases my skills, background, and achievements. The portfolio should include:
+About Section: An authentic introduction about me, your passion, and what drives me.
+Programming Languages: List the programming languages.
+Educational Background section to provide details of my education and include a downloadable CV.
+Interests section: What excites me about tech and your professional interests.
+Projects section: Links to your projects with brief descriptions.
+Contact Form to make it easy for collaborators or employers to reach you.
+Please ensure creativity and Ingenuity, clean, readable, and efficient code, clear documentation and usage of responsive and visually appealing tools.
