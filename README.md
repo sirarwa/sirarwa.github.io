@@ -12,13 +12,14 @@ This portfolio website showcases my skills, background, and achievements in the 
 * **About Me Section:** A brief introduction about myself and my career aspirations.
 * **Educational Background:** Details of my education, including a downloadable CV.
 * **Interests:** A description of my interests and professional goals.
-* **Projects:** GitHub repo and demo links to my projects with brief descriptions.
+* **Projects:** GitHub repo/demo links to my projects with brief descriptions.
 * **Contact Form:** Collaborators or employers can contact me through this (This form is linked to Google Sheets using script)
 
 ## Languages Used
 
 * HTML
 * CSS
+* Java Script
 ## How to View the Project
 
 1.  Clone this repository to your local machine:
