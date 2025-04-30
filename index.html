@@ -7,45 +7,65 @@
     <meta name="keywords" content="software developer, web developer, portfolio, Arwa David, Kenya" />
     <meta name="author" content="Arwa David" />
     <title>Arwa Portfolio</title>
-    <link rel="stylesheet" href="Styles.css" />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Styles.css" />
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
     <!-- Skip to main content link for screen readers -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <header role="banner">
-      <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="logo" role="heading" aria-level="1">Arwa David</div>
-        <ul class="nav-links" role="list">
-          <li><a href="#home" class="active" aria-current="page">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <nav id="navbar" class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand logo" href="#" role="heading" aria-level="1">Arwa David</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto nav-links" role="list">
+              <li class="nav-item"><a class="nav-link active" href="#home" aria-current="page">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main id="main-content" role="main">
       <!-- Hero Section -->
       <section id="home" class="hero" aria-label="Introduction">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>Hello, I'm <span class="highlight">David Arwa</span></h1>
-            <h2>Software Developer</h2>
-            <p>I create effective solutions to solve everyday problems.</p>
-            <div class="hero-buttons">
-              <a href="#projects" class="btn btn-primary">View My Projects</a>
-              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        <div class="container">
+          <div class="row align-items-center hero-content">
+            <div class="col-lg-6 hero-text" data-aos="fade-right" data-aos-duration="1000">
+              <h1>Hello, I'm <span class="highlight">David Arwa</span></h1>
+              <h2 class="hero-text"></h2>
+              <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+              </div>
             </div>
-          </div>
-          <div class="hero-image">
-            <div class="image-container">
-              <img src="My_Profile.jpg" alt="Profile photo of Arwa David" />
+            <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-duration="1000">
+              <div class="image-container">
+                <img src="New_Profile.jpeg" alt="Profile photo of Arwa David" />
+              </div>
             </div>
           </div>
         </div>
@@ -56,13 +76,13 @@
 
       <!-- About Section -->
       <section id="about" class="about section" aria-labelledby="about-title">
-        <div class="section-container">
-          <h2 id="about-title" class="section-title">About Me</h2>
-          <div class="about-content">
-            <div class="about-image">
-              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Illustration representing about section">
+        <div class="container section-container">
+          <h2 id="about-title" class="section-title" data-aos="fade-up">About Me</h2>
+          <div class="row about-content">
+            <div class="col-lg-5 about-image" data-aos="fade-right" data-aos-delay="100">
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Illustration representing about section" class="img-fluid rounded">
             </div>
-            <div class="about-text">
+            <div class="col-lg-7 about-text" data-aos="fade-left" data-aos-delay="200">
               <p>I'm a digital catalyst. I translate business needs into sleek code, automate workflows like a pro, and build systems that actually work. I'm here to amplify your impact, one line of code and one perfectly managed task at a time.</p>
               <p>I believe in continuous learning and staying updated with emerging technologies. My approach combines technical expertise with creative problem-solving to deliver solutions that not only meet but exceed client expectations.</p>
               
@@ -74,94 +94,138 @@
 
       <!-- Skills Section -->
       <section id="skills" class="skills section" aria-labelledby="skills-title">
-        <div class="section-container">
-          <h2 id="skills-title" class="section-title">My Skills</h2>
+        <div class="container section-container">
+          <h2 id="skills-title" class="section-title" data-aos="fade-up">My Skills</h2>
           <div class="skills-content">
-            <div class="skills-description">
+            <div class="skills-description" data-aos="fade-up" data-aos-delay="100">
               <p>I am skilled in a range of Programming Languages, from front-end to back-end. Here are my key technical skills:</p>
             </div>
             
-            <div class="skills-categories" role="list">
-              <div class="skill-category" role="listitem">
-                <h3>Front-End</h3>
-                <div class="skill-list" role="list">
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fab fa-html5" style="color: #E34F26;"></i>
-                      <span>HTML</span>
+            <div class="row skills-categories" role="list">
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-category" role="listitem">
+                  <h3>Front-End</h3>
+                  <div class="skill-list" role="list">
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fab fa-html5" style="color: #E34F26;"></i>
+                        <span>HTML</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #E34F26;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fab fa-js" style="color: #F7DF1E;"></i>
-                      <span>JavaScript</span>
+                    
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                        <span>JavaScript</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #F7DF1E;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
-                      <span>CSS</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skill-category" role="listitem">
-                <h3>Back-End</h3>
-                <div class="skill-list" role="list">
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fab fa-node-js" style="color: #339933;"></i>
-                      <span>Node.js</span>
-                    </div>
-                  </div>
-                  
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fab fa-python" style="color: #3776AB;"></i>
-                      <span>Python</span>
-                    </div>
-                  </div>
-                  
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fas fa-database" style="color: #00758F;"></i>
-                      <span>SQL</span>
+                    
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+                        <span>CSS</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #1572B6;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div class="skill-category" role="listitem">
-                <h3>Other Skills</h3>
-                <div class="skill-list" role="list">
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fas fa-chart-line" style="color: #4CAF50;"></i>
-                      <span>Data Analysis</span>
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-category" role="listitem">
+                  <h3>Back-End</h3>
+                  <div class="skill-list" role="list">
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fab fa-node-js" style="color: #339933;"></i>
+                        <span>Node.js</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 70%; background-color: #339933;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fab fa-python" style="color: #3776AB;"></i>
+                        <span>Python</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #3776AB;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fas fa-database" style="color: #00758F;"></i>
+                        <span>SQL</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #00758F;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fab fa-github" style="color: #181717;"></i>
-                      <span>Git/GitHub</span>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-category" role="listitem">
+                  <h3>Other Skills</h3>
+                  <div class="skill-list" role="list">
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fas fa-chart-line" style="color: #4CAF50;"></i>
+                        <span>Data Analysis</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 65%; background-color: #4CAF50;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fas fa-robot" style="color: #6E59A5;"></i>
-                      <span>Generative AI Tools</span>
+                    
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fab fa-github" style="color: #181717;"></i>
+                        <span>Git/GitHub</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #181717;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div class="skill-item" role="listitem">
-                    <div class="skill-info">
-                      <i class="fas fa-headset" style="color: #F97316;"></i>
-                      <span>Virtual Assistance</span>
+                    
+                    <div class="skill-item" role="listitem">
+                      <div class="skill-info">
+                        <i class="fas fa-robot" style="color: #6E59A5;"></i>
+                        <span>Generative AI Tools</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #6E59A5;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -173,10 +237,10 @@
 
       <!-- Education Section -->
       <section id="education" class="education section">
-        <div class="section-container">
-          <h2 class="section-title">Education</h2>
+        <div class="container section-container">
+          <h2 class="section-title" data-aos="fade-up">Education</h2>
           <div class="timeline">
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
               <div class="timeline-date">
                 <span>Feb 2025 - Present</span>
               </div>
@@ -187,36 +251,36 @@
               </div>
             </div>
             
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
               <div class="timeline-date">
                 <span>Feb 2025 - March 2025</span>
               </div>
               <div class="timeline-content">
                 <h3>AI Starter Kit</h3>
                 <h4>ALX Africa</h4>
-                <p> Acquired foundational knowledge in AI such as effective prompting, AI-Powered Automation Agents, AI-Powered Web Development,  image/video generation, generative UI,Generating 3D Objects, Generative Video Effects</p>
+                <p>Acquired foundational knowledge in AI such as effective prompting, AI-Powered Automation Agents, AI-Powered Web Development, image/video generation, generative UI, Generating 3D Objects, Generative Video Effects</p>
               </div>
             </div>
             
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
               <div class="timeline-date">
                 <span>Aug 2024 - Oct 2024</span>
               </div>
               <div class="timeline-content">
                 <h3>Virtual Assistant</h3>
                 <h4>ALX Africa</h4>
-                <p>A Virtual Assistance short course that covered skills in email management, project management, data entry, travel management, Google Workspace among other skills. </p>
+                <p>A Virtual Assistance short course that covered skills in email management, project management, data entry, travel management, Google Workspace among other skills.</p>
               </div>
             </div>
             
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
               <div class="timeline-date">
                 <span>2017 - 2022</span>
               </div>
               <div class="timeline-content">
                 <h3>Bachelor of Commerce (Business Information Systems)</h3>
                 <h4>The University of Nairobi</h4>
-                <p>Equipped with a strong foundation in business principles and technical expertise. Acquiredskills in database management, Information System Audit, and project management. I am adept at leveraging information systems to drive strategic business decisions.</p>
+                <p>Equipped with a strong foundation in business principles and technical expertise. Acquired skills in database management, Information System Audit, and project management. I am adept at leveraging information systems to drive strategic business decisions.</p>
               </div>
             </div>
           </div>
@@ -225,77 +289,127 @@
 
       <!-- Projects Section -->
       <section id="projects" class="projects section" aria-labelledby="projects-title">
-        <div class="section-container">
-          <h2 id="projects-title" class="section-title">My Projects</h2>
-          <div class="project-filters" role="tablist" aria-label="Project categories">
+        <div class="container section-container">
+          <h2 id="projects-title" class="section-title" data-aos="fade-up">My Projects</h2>
+          <div class="project-filters mb-4" role="tablist" aria-label="Project categories" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="data analysis">Data Analysis</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="database">Database</button>
           </div>
           
-          <div class="projects-grid" role="tabpanel" id="all-projects" aria-labelledby="all">
-            <div class="project-card" data-category="web">
-              <div class="project-image">
-                <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="My Portfolio Website">
-              </div>
-              <div class="project-info">
-                <h3>Portfolio Website</h3>
-                <p>A portfolio website that showcases my skills, interests and projects.</p>
-                <div class="project-tech">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
+          <div class="row projects-grid" role="tabpanel" id="all-projects" aria-labelledby="all">
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="My Portfolio Website">
                 </div>
-                <div class="project-links">
-                  <a href="https://sirarwa.github.io/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                  <a href="https://github.com/sirarwa/sirarwa.github.io" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="project-card" data-category="mobile">
-              <div class="project-image">
-                <img src="https://images.pexels.com/photos/20552602/pexels-photo-20552602/free-photo-of-calculator.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Calculator App">
-              </div>
-              <div class="project-info">
-                <h3>Calculator App</h3>
-                <p>A simple calculator app that allows users to perform basic arithmetic operations.</p>
-                <div class="project-tech">
-                  <span>Python</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/sirarwa/PLP-Learning-Python" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <div class="project-info">
+                  <h3>Portfolio Website</h3>
+                  <p>A portfolio website that showcases my skills, interests and projects.</p>
+                  <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://sirarwa.github.io/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="https://github.com/sirarwa/sirarwa.github.io" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div class="project-card" data-category="data">
-              <div class="project-image">
-                <img src="https://img.freepik.com/free-photo/close-up-heart-rate-monitor-measuring-heartbeat-patient-doing-gymnastics-physical-recovery-retired-man-using-sport-equipment-exercise-physiotherapy-strength_482257-30692.jpg" alt="Heart Beat Analysis Graph">
-              </div>
-              <div class="project-info">
-                <h3>Heart Attack Analysis</h3>
-                <p>A mini project for regression analysis on a health data set to predict chances of heart attack among patients.</p>
-                <div class="project-tech">
-                  <span>Python</span>
-                  <span>Jupyter Notebook</span>
-                  <span>Pandas</span>
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="mobile" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="https://images.pexels.com/photos/20552602/pexels-photo-20552602/free-photo-of-calculator.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Calculator App">
                 </div>
-                <div class="project-links">
-                  <a href="https://github.com/sirarwa/heart-attack-analysis" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <div class="project-info">
+                  <h3>Calculator App</h3>
+                  <p>A simple calculator app that allows users to perform basic arithmetic operations.</p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/sirarwa/PLP-Learning-Python" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div class="project-card" data-category="python">
-              <div class="project-image">
-                <img src="https://img.freepik.com/free-vector/text-files-concept-illustration_114360-4044.jpg" alt="File Manipulation">
-              </div>
-              <div class="project-info">
-                <h3>File Manipulation & Handling</h3>
-                <p>A Python script that allows users to manipulate and handle files in a directory.</p>
-                <div class="project-tech">
-                  <span>Python</span>
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="data analysis" data-aos="fade-up" data-aos-delay="400">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="https://img.freepik.com/free-photo/close-up-heart-rate-monitor-measuring-heartbeat-patient-doing-gymnastics-physical-recovery-retired-man-using-sport-equipment-exercise-physiotherapy-strength_482257-30692.jpg" alt="Heart Beat Analysis Graph">
                 </div>
-                <div class="project-links">
-                  <a href="https://github.com/sirarwa/PLP-Python-Wk4-Task" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <div class="project-info">
+                  <h3>Heart Attack Analysis</h3>
+                  <p>A mini project for regression analysis on a health data set to predict chances of heart attack among patients.</p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                    <span>Jupyter Notebook</span>
+                    <span>Pandas</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/sirarwa/heart-attack-analysis" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="python" data-aos="fade-up" data-aos-delay="500">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="https://img.freepik.com/free-vector/hand-drawn-credit-assessment-concept-with-documents_23-2149154259.jpg?" alt="File Manipulation">
+                </div>
+                <div class="project-info">
+                  <h3>File Manipulation & Handling</h3>
+                  <p>A Python script that allows users to manipulate and handle files in a directory.</p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/sirarwa/PLP-Python-Wk4-Task" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="python" data-aos="fade-up" data-aos-delay="500">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="https://images.pexels.com/photos/5475750/pexels-photo-5475750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Data Analysis with Python">
+                </div>
+                <div class="project-info">
+                  <h3>Data Analysis and Visualization</h3>
+                  <p>A Data Analysis mini-project using Python Libraries</p>
+                  <div class="project-tech">
+                    <span>Matplotlib</span>
+                    <span>Pandas</span>
+                    <span>Jupyter Notebook</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/sirarwa/Week7" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="database" data-aos="fade-up" data-aos-delay="500">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="https://img.freepik.com/free-vector/network-database-concept_1284-4084.jpg?" alt="File Manipulation">
+                </div>
+                <div class="project-info">
+                  <h3>Database Design</h3>
+                  <p>Databse and schema design using ERD diagram and SQL queries</p>
+                  <div class="project-tech">
+                    <span>My SQL</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/S-kanti/Database-group-assignment" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -305,56 +419,68 @@
 
       <!-- Interests Section -->
       <section id="interests" class="interests section">
-        <div class="section-container">
-          <h2 class="section-title">My Interests</h2>
+        <div class="container section-container">
+          <h2 class="section-title" data-aos="fade-up">My Interests</h2>
           <div class="interests-content">
-            <div class="interests-grid">
-              <div class="interest-card">
-                <div class="interest-icon">
-                  <i class="fas fa-code"></i>
+            <div class="row interests-grid">
+              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="interest-card">
+                  <div class="interest-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <h3>Programming</h3>
+                  <p>Passionate about coding and solving complex problems through creative solutions.</p>
                 </div>
-                <h3>Programming</h3>
-                <p>Passionate about coding and solving complex problems through creative solutions.</p>
               </div>
               
-              <div class="interest-card">
-                <div class="interest-icon">
-                  <i class="fas fa-robot"></i>
+              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="interest-card">
+                  <div class="interest-icon">
+                    <i class="fas fa-robot"></i>
+                  </div>
+                  <h3>AI & Machine Learning</h3>
+                  <p>Fascinated by artificial intelligence and its applications in solving real-world problems.</p>
                 </div>
-                <h3>AI & Machine Learning</h3>
-                <p>Fascinated by artificial intelligence and its applications in solving real-world problems.</p>
               </div>
 
-              <div class="interest-card">
-                <div class="interest-icon">
-                  <i class="fas fa-book"></i>
+              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="interest-card">
+                  <div class="interest-icon">
+                    <i class="fas fa-book"></i>
+                  </div>
+                  <h3>Tech Innovations</h3>
+                  <p>I stay updated on Tech trends and news by reading tech blogs, websites and other related media.</p>
                 </div>
-                <h3>Tech Innovations</h3>
-                <p>I stay updated on Tech trends and news by reading tech blogs, websites and other related media.</p>
               </div>
 
-              <div class="interest-card">
-                <div class="interest-icon">
-                  <i class="fas fa-music"></i>
+              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="interest-card">
+                  <div class="interest-icon">
+                    <i class="fas fa-music"></i>
+                  </div>
+                  <h3>Music</h3>
+                  <p>Love listening to various Christian and Gospel music and loves playing the piano.</p>
                 </div>
-                <h3>Music</h3>
-                <p>Love listening to various Christian and Gospel music and loves playing the piano.</p>
               </div>
 
-              <div class="interest-card">
-                <div class="interest-icon">
-                  <i class="fas fa-plane"></i>
+              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="interest-card">
+                  <div class="interest-icon">
+                    <i class="fas fa-plane"></i>
+                  </div>
+                  <h3>Travel</h3>
+                  <p>I enjoy exploring new places and experiencing different cultures around the world.</p>
                 </div>
-                <h3>Travel</h3>
-                <p>I enjoy exploring new places and experiencing different cultures around the world.</p>
               </div>
 
-              <div class="interest-card">
-                <div class="interest-icon">
-                  <i class="fas fa-gamepad"></i>
+              <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="interest-card">
+                  <div class="interest-icon">
+                    <i class="fas fa-gamepad"></i>
+                  </div>
+                  <h3>Gaming</h3>
+                  <p>Enthusiastic about Gaming.</p>
                 </div>
-                <h3>Gaming</h3>
-                <p>Enthusiastic about Gaming.</p>
               </div>
             </div>
           </div>
@@ -363,10 +489,10 @@
 
       <!-- Contact Section -->
       <section id="contact" class="contact section" aria-labelledby="contact-title">
-        <div class="section-container">
-          <h2 id="contact-title" class="section-title">Contact Me</h2>
-          <div class="contact-content">
-            <div class="contact-info">
+        <div class="container section-container">
+          <h2 id="contact-title" class="section-title" data-aos="fade-up">Contact Me</h2>
+          <div class="row contact-content">
+            <div class="col-lg-5 contact-info" data-aos="fade-right" data-aos-delay="100">
               <h3>Get in Touch</h3>
               <p>Feel free to reach out to me for any inquiries or opportunities.</p>
               <div class="contact-details">
@@ -395,26 +521,34 @@
               </div>
             </div>
             
-            <form id="contactForm" class="contact-form">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-              <div id="formStatus" class="form-status"></div>
-            </form>
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+              <form id="contactForm" class="contact-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid email</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" class="form-control" required>
+                  <div class="invalid-feedback">Please enter a subject</div>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" class="form-control" required></textarea>
+                  <div class="invalid-feedback">Please enter your message</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="formStatus" class="form-status mt-3"></div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -422,34 +556,47 @@
 
     <!-- Footer Section-->
     <footer class="footer" role="contentinfo">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <h3>Arwa David</h3>
-          <p>Software Developer</p>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>Arwa David</h3>
+            <p>Software Developer</p>
+          </div>
+          <div class="footer-links" role="list">
+            <a href="#home" role="listitem">Home</a>
+            <a href="#about" role="listitem">About</a>
+            <a href="#skills" role="listitem">Skills</a>
+            <a href="#education" role="listitem">Education</a>
+            <a href="#projects" role="listitem">Projects</a>
+            <a href="#contact" role="listitem">Contact</a>
+          </div>
+          <div class="footer-social" role="list">
+            <a href="https://github.com/sirarwa" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/davidarwa/" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://x.com/adavio_" aria-label="Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://wa.me/254796470369" aria-label="WhatsApp contact"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/arwadavido/" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/arwadavido/" aria-label="Facebook profile"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          </div>
         </div>
-        <div class="footer-links" role="list">
-          <a href="#home" role="listitem">Home</a>
-          <a href="#about" role="listitem">About</a>
-          <a href="#skills" role="listitem">Skills</a>
-          <a href="#education" role="listitem">Education</a>
-          <a href="#projects" role="listitem">Projects</a>
-          <a href="#contact" role="listitem">Contact</a>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sir Arwa. All Rights Reserved.</p>
         </div>
-        <div class="footer-social" role="list">
-          <a href="https://github.com/sirarwa" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/davidarwa/" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-          <a href="https://x.com/adavio_" aria-label="Twitter profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-          <a href="https://wa.me/254796470369" aria-label="WhatsApp contact"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/arwadavido/" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/arwadavido/" aria-label="Facebook profile"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Arwa. All Rights Reserved.</p>
       </div>
     </footer>
     <a href="#home" class="back-to-top" aria-label="Back to top">
       <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </a>     
+    </a>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--Typed JS for typing effect-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Custom JavaScript -->
+    <script src="Script.js"></script>
   </body>
 </html>
+<!-- End of HTML Document -->
