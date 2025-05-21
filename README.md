@@ -4,7 +4,7 @@ This repository contains my personal portfolio website, created as part of the P
 
 ## Overview
 
-This portfolio website showcases my skills, background, and achievements in the tech. It includes sections for my skills, a description about me, educational background (with a downloadable CV), interests, projects, and a contact form linked to Google Sheets.
+This portfolio website showcases my skills, background, and achievements in the tech. It includes sections for my skills, a description about me, educational background (with a downloadable CV), interests, projects, and a contact form.
 
 ## Features
 
@@ -13,7 +13,7 @@ This portfolio website showcases my skills, background, and achievements in the 
 * **Educational Background:** Details of my education, including a downloadable CV.
 * **Interests:** A description of my interests and professional goals.
 * **Projects:** GitHub repo/demo links to my projects with brief descriptions.
-* **Contact Form:** Collaborators or employers can contact me through this (This form is linked to Google Sheets using script)
+* **Contact Form:** Collaborators or employers can contact me through this.
 
 ## Languages Used
 
